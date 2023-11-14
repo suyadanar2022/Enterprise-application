@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "0e366ff4-4817-49db-b18f-b97bd8f3a765",
+		"name": "Schedule Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getSchedules",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/schedules",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveSchedules",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\" : \"2022-02-10T05:30:45.177+00:00\",\n    \"durationInMinute\": 105,\n    \"noOfPassenger\" : 14,\n    \"source\" : \"FAIR_FIELD\",\n    \"destination\" : \"OTTA_MUA\",\n    \"serviceVehicleList\": [\n        {   \"id\" : null,\n            \"driver\" : {\n               \"id\": 4,\n                \"firstName\": \"Saliya\",\n                \"lastname\": \"Gunasekara\",\n                \"age\": 35,\n                \"address\": \"Fairfield\",\n                \"licenseId\": \"5006155343\",\n                \"experience\": 12\n            },\n            \"vehicle\" : {\n                \"id\": 3,\n                \"numberPlate\": \"6353534422\",\n                \"type\": \"SEDAN\",\n                \"model\": \"Corolla\",\n                \"brand\": \"Toyta\",\n                \"modelYear\": 2019,\n                \"numberOfSeats\": 7,\n                \"insuranceId\": \"DFDSF324\",\n                \"pickUpSpace\": true\n                },\n            \"schedule\":{}\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/schedules",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "driverCalendar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/schedules/driver/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"schedules",
+						"driver",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

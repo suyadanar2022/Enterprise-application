@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "8d1e9c65-1193-4f62-baf4-ef795474c6fc",
+		"name": "Driver Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save driver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\" : \"Saliya\",\n    \"lastname\" : \"Gunasekara\",\n    \"age\" : 35,\n    \"address\" : \"Fairfield\",\n    \"licenseId\" : \"5006155343\",\n    \"experience\" : 12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/drivers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get driver by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/drivers/444",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drivers",
+						"444"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all drivers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/drivers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update driver by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"firstName\" : \"Eranga\",\r\n\"lastname\" : \"Basnayaka\",\r\n\"age\" : 35,\r\n\"address\" : \"Fairfield\",\r\n\"licenseId\" : \"5006155343\",\r\n\"experience\" : 12,\r\n\"pickUpSpace\" : true\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/drivers/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drivers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete driver by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/drivers/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drivers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAvaiableDrivers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n            \"startDate\" : \"2022-02-26T05:40:45.177+00:00\",\n            \"endDate\" : \"2022-02-29T05:40:45.177+00:00\"\n                \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/drivers/getAvailableDrivers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drivers",
+						"getAvailableDrivers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
