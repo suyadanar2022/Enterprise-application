@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Empty_Maven_Project" />
+        <module name="W1D2-Dependency_Injection-1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="W1D2-Dependency_Injection-1" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

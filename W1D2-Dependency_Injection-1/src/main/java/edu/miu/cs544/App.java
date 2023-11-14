@@ -6,10 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
     public static void main(String[] args) {
-
-//        ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-//        ApplicationContext context = new ClassPathXmlApplicationContext("springconfig.xml");
-        ApplicationContext context = new ClassPathXmlApplicationContext("springconfig2.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("springconfig.xml");
         Greeting greeting = context.getBean("greeting", Greeting.class);
         greeting.sayHello();
     } 
